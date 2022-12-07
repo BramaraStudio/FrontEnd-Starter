@@ -2,8 +2,8 @@
   <!--begin::Modal - Create App-->
   <div
     class="modal fade"
-    id="master_add_data"
-    ref="master_add_data"
+    id="basic_add_data"
+    ref="basic_add_data"
     tabindex="-1"
     aria-hidden="true"
   >
@@ -14,7 +14,7 @@
         <!--begin::Modal header-->
         <div class="modal-header">
           <!--begin::Modal title-->
-          <h2>Create App</h2>
+          <h2>Tambah Data</h2>
           <!--end::Modal title-->
 
           <!--begin::Close-->
@@ -68,9 +68,9 @@
 
                   <!--begin::Label-->
                   <div class="stepper-label">
-                    <h3 class="stepper-title">Details</h3>
+                    <h3 class="stepper-title">Nama</h3>
 
-                    <div class="stepper-desc">Name your App</div>
+                    <div class="stepper-desc">Informasi Dasar</div>
                   </div>
                   <!--end::Label-->
                 </div>
@@ -91,9 +91,9 @@
 
                   <!--begin::Label-->
                   <div class="stepper-label">
-                    <h3 class="stepper-title">Frameworks</h3>
+                    <h3 class="stepper-title">Skills</h3>
 
-                    <div class="stepper-desc">Define your app framework</div>
+                    <div class="stepper-desc">Skill yang dimiliki</div>
                   </div>
                   <!--begin::Label-->
                 </div>
@@ -116,7 +116,9 @@
                   <div class="stepper-label">
                     <h3 class="stepper-title">Database</h3>
 
-                    <div class="stepper-desc">Select the app database type</div>
+                    <div class="stepper-desc">
+                      Database yang sering digunakan
+                    </div>
                   </div>
                   <!--end::Label-->
                 </div>
@@ -139,7 +141,7 @@
                   <div class="stepper-label">
                     <h3 class="stepper-title">Billing</h3>
 
-                    <div class="stepper-desc">Provide payment details</div>
+                    <div class="stepper-desc">Informasi Pembayaran</div>
                   </div>
                   <!--end::Label-->
                 </div>
@@ -190,11 +192,11 @@
                       <label
                         class="d-flex align-items-center fs-5 fw-bold mb-2"
                       >
-                        <span class="required">App Name</span>
+                        <span class="required">Nama Lengkap</span>
                         <i
                           class="fas fa-exclamation-circle ms-2 fs-7"
                           data-bs-toggle="tooltip"
-                          title="Specify your unique app name"
+                          title="Isikan nama lengkap sesuai KTP"
                         ></i>
                       </label>
                       <!--end::Label-->
@@ -203,12 +205,12 @@
                       <Field
                         type="text"
                         class="form-control form-control-lg form-control-solid"
-                        name="appName"
+                        name="nama"
                         placeholder=""
                       />
                       <ErrorMessage
                         class="fv-plugins-message-container invalid-feedback"
-                        name="appName"
+                        name="nama"
                       />
                       <!--end::Input-->
                     </div>
@@ -220,12 +222,12 @@
                       <label
                         class="d-flex align-items-center fs-5 fw-bold mb-4"
                       >
-                        <span class="required">Category</span>
+                        <span class="required">Pekerjaan</span>
 
                         <i
                           class="fas fa-exclamation-circle ms-2 fs-7"
                           data-bs-toggle="tooltip"
-                          title="Select your app category"
+                          title="Pilih Pekerjaan"
                         ></i>
                       </label>
                       <!--end::Label-->
@@ -252,13 +254,9 @@
 
                             <!--begin:Info-->
                             <span class="d-flex flex-column">
-                              <span class="fw-bolder fs-6"
-                                >Quick Online Courses</span
-                              >
-
+                              <span class="fw-bolder fs-6"> PNS </span>
                               <span class="fs-7 text-muted"
-                                >Creating a clear text structure is just one
-                                SEO</span
+                                >Pegawai Negeri Sipil</span
                               >
                             </span>
                             <!--end:Info-->
@@ -274,7 +272,7 @@
                             <Field
                               class="form-check-input"
                               type="radio"
-                              name="category"
+                              name="pekerjaan"
                               value="1"
                             />
                           </span>
@@ -302,13 +300,10 @@
 
                             <!--begin:Info-->
                             <span class="d-flex flex-column">
-                              <span class="fw-bolder fs-6"
-                                >Face to Face Discussions</span
-                              >
+                              <span class="fw-bolder fs-6">Swasta</span>
 
                               <span class="fs-7 text-muted"
-                                >Creating a clear text structure is just one
-                                aspect</span
+                                >Pekerja Perusahaan Swasta</span
                               >
                             </span>
                             <!--end:Info-->
@@ -324,7 +319,7 @@
                             <Field
                               class="form-check-input"
                               type="radio"
-                              name="category"
+                              name="pekerjaan"
                               value="2"
                             />
                           </span>
@@ -352,14 +347,9 @@
 
                             <!--begin:Info-->
                             <span class="d-flex flex-column">
-                              <span class="fw-bolder fs-6"
-                                >Full Intro Training</span
-                              >
+                              <span class="fw-bolder fs-6">Freelance</span>
 
-                              <span class="fs-7 text-muted"
-                                >Creating a clear text structure
-                                copywriting</span
-                              >
+                              <span class="fs-7 text-muted">Pekerja Lepas</span>
                             </span>
                             <!--end:Info-->
                           </span>
@@ -374,7 +364,7 @@
                             <Field
                               class="form-check-input"
                               type="radio"
-                              name="category"
+                              name="pekerjaan"
                               value="3"
                             />
                           </span>
@@ -383,7 +373,7 @@
                         <!--end::Option-->
                         <ErrorMessage
                           class="fv-plugins-message-container invalid-feedback"
-                          name="category"
+                          name="pekerjaan"
                         />
                       </div>
                       <!--end:Options-->
@@ -1134,8 +1124,8 @@ import * as Yup from "yup";
 import { hideModal } from "@/core/helpers/dom";
 
 interface Step1 {
-  appName: string;
-  category: string;
+  nama: string;
+  pekerjaan: string;
 }
 
 interface Step2 {
@@ -1159,7 +1149,7 @@ interface Step4 {
 interface KTCreateApp extends Step1, Step2, Step3, Step4 {}
 
 export default defineComponent({
-  name: "master_add_data",
+  name: "basic_add_data",
   components: {
     Field,
     ErrorMessage,
@@ -1171,8 +1161,8 @@ export default defineComponent({
     const currentStepIndex = ref(0);
 
     const formData = ref<KTCreateApp>({
-      appName: "",
-      category: "1",
+      nama: "",
+      pekerjaan: "1",
       framework: "1",
       dbName: "",
       dbType: "1",
@@ -1192,8 +1182,8 @@ export default defineComponent({
 
     const createAppSchema = [
       Yup.object({
-        appName: Yup.string().required().label("App name"),
-        category: Yup.string().required().label("Category"),
+        nama: Yup.string().required().label("Nama"),
+        pekerjaan: Yup.string().required().label("Pekerjaan"),
       }),
       Yup.object({
         framework: Yup.string().required().label("Framework"),

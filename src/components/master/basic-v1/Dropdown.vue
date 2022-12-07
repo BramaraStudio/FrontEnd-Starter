@@ -31,7 +31,7 @@
         href="#"
         class="menu-link px-3"
         data-bs-toggle="modal"
-        data-bs-target="#master_add_data"
+        data-bs-target="#basic_add_data"
       >
         Tambah Data
       </a>

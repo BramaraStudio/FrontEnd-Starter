@@ -4,7 +4,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted } from "vue";
-import TableBasic from "@/components/master-basic/Table.vue";
+import TableBasic from "@/components/master/basic-v1/Table.vue";
 import { setCurrentPageBreadcrumbs } from "@/core/helpers/breadcrumb";
 import { MenuComponent } from "@/assets/ts/components";
 

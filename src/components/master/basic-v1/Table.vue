@@ -190,8 +190,8 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Dropdown from "@/components/master-basic/Dropdown.vue";
-import Modal from "@/components/master-basic/Modal.vue";
+import Dropdown from "@/components/master/basic-v1/Dropdown.vue";
+import Modal from "@/components/master/basic-v1/Modal.vue";
 
 export default defineComponent({
   name: "kt-widget-10",
