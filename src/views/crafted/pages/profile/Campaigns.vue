@@ -2,7 +2,7 @@
   <!--begin::Campaigns toolbar-->
   <div class="d-flex flex-wrap flex-stack my-5">
     <!--begin::Title-->
-    <h2 class="fw-bold my-2">
+    <h2 class="fw-semobold my-2">
       Campaigns
       <span class="fs-4 text-gray-400 ms-1">30 Days</span>
     </h2>
@@ -48,7 +48,7 @@
           icon="media/svg/brand-logos/twitch.svg"
           content="$500.00"
           color="success"
-          arrow="Up-right"
+          arrow="media/icons/duotune/arrows/arr094.svg"
           footer-data="+40.5%"
           footer-text="more impressions"
           indicator-value="0.5%"
@@ -64,7 +64,7 @@
           icon="media/svg/brand-logos/twitter.svg"
           content="807k"
           color="success"
-          arrow="Up-right"
+          arrow="media/icons/duotune/arrows/arr094.svg"
           footer-data="+17.62%"
           footer-text="Followers growth"
           indicator-label="New trials"
@@ -80,7 +80,7 @@
           icon="media/svg/brand-logos/spotify.svg"
           content="1,073"
           color="danger"
-          arrow="Down-left"
+          arrow="media/icons/duotune/arrows/arr093.svg"
           footer-data="+10.45%"
           footer-text="Less comments than usual"
           indicator-label="Impressions"
@@ -96,7 +96,7 @@
           icon="media/svg/brand-logos/pinterest-p.svg"
           content="97"
           color="success"
-          arrow="Up-right"
+          arrow="media/icons/duotune/arrows/arr094.svg"
           footer-data="+26.1%"
           footer-text="More posts"
           indicator-label="Spend"
@@ -112,7 +112,7 @@
           icon="media/svg/brand-logos/github.svg"
           content="4,109"
           color="danger"
-          arrow="Down-left"
+          arrow="media/icons/duotune/arrows/arr093.svg"
           footer-data="+32.8%"
           footer-text="Less contributions"
           indicator-label="Dispute"
@@ -128,7 +128,7 @@
           icon="media/svg/brand-logos/youtube-3.svg"
           content="354"
           color="success"
-          arrow="Up-right"
+          arrow="media/icons/duotune/arrows/arr094.svg"
           footer-data="+29.45%"
           footer-text="Subscribers growth"
           indicator-label="Subscribers"
@@ -144,7 +144,7 @@
           icon="media/svg/brand-logos/telegram.svg"
           content="566"
           color="success"
-          arrow="Up-right"
+          arrow="media/icons/duotune/arrows/arr094.svg"
           footer-data="+11.4%"
           footer-text="more clicks"
           indicator-label="Profit"
@@ -160,7 +160,7 @@
           icon="media/svg/brand-logos/reddit.svg"
           content="2.1M"
           color="success"
-          arrow="Up-right"
+          arrow="media/icons/duotune/arrows/arr094.svg"
           footer-data="-46.7%"
           footer-text="more adds"
           indicator-label="Retention"
@@ -172,7 +172,9 @@
 
   <!--begin::Pagination-->
   <div class="d-flex flex-stack flex-wrap pt-10">
-    <div class="fs-6 fw-bold text-gray-700">Showing 1 to 10 of 50 entries</div>
+    <div class="fs-6 fw-semobold text-gray-700">
+      Showing 1 to 10 of 50 entries
+    </div>
 
     <!--begin::Pages-->
     <ul class="pagination">
@@ -214,19 +216,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { defineComponent } from "vue";
 import Card2 from "@/components/cards/Card2.vue";
-import { setCurrentPageBreadcrumbs } from "@/core/helpers/breadcrumb";
 
 export default defineComponent({
-  name: "campaigns",
+  name: "profile-campaigns",
   components: {
     Card2,
-  },
-  setup() {
-    onMounted(() => {
-      setCurrentPageBreadcrumbs("Campaigns", ["Pages", "Profile"]);
-    });
   },
 });
 </script>

@@ -4,7 +4,7 @@
     <!--begin::Heading-->
     <div class="pb-10 pb-lg-15">
       <!--begin::Title-->
-      <h2 class="fw-bolder d-flex align-items-center text-dark">
+      <h2 class="fw-bold d-flex align-items-center text-dark">
         Choose Account Type
         <i
           class="fas fa-exclamation-circle ms-2 fs-7"
@@ -15,9 +15,9 @@
       <!--end::Title-->
 
       <!--begin::Notice-->
-      <div class="text-gray-400 fw-bold fs-6">
+      <div class="text-gray-400 fw-semobold fs-6">
         If you need more info, please check out
-        <a href="#" class="link-primary fw-bolder">Help Page</a>.
+        <a href="#" class="link-primary fw-bold">Help Page</a>.
       </div>
       <!--end::Notice-->
     </div>
@@ -38,13 +38,7 @@
             id="kt_create_account_form_account_type_personal"
           />
           <label
-            class="
-              btn btn-outline btn-outline-dashed btn-outline-default
-              p-7
-              d-flex
-              align-items-center
-              mb-10
-            "
+            class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
             for="kt_create_account_form_account_type_personal"
           >
             <span class="svg-icon svg-icon-3x me-5">
@@ -52,11 +46,11 @@
             </span>
 
             <!--begin::Info-->
-            <span class="d-block fw-bold text-start">
-              <span class="text-dark fw-bolder d-block fs-4 mb-2">
+            <span class="d-block fw-semobold text-start">
+              <span class="text-dark fw-bold d-block fs-4 mb-2">
                 Personal Account
               </span>
-              <span class="text-gray-400 fw-bold fs-6"
+              <span class="text-gray-400 fw-semobold fs-6"
                 >If you need more info, please check it out</span
               >
             </span>
@@ -77,12 +71,7 @@
             id="kt_create_account_form_account_type_corporate"
           />
           <label
-            class="
-              btn btn-outline btn-outline-dashed btn-outline-default
-              p-7
-              d-flex
-              align-items-center
-            "
+            class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
             for="kt_create_account_form_account_type_corporate"
           >
             <span class="svg-icon svg-icon-3x me-5">
@@ -90,11 +79,11 @@
             </span>
 
             <!--begin::Info-->
-            <span class="d-block fw-bold text-start">
-              <span class="text-dark fw-bolder d-block fs-4 mb-2"
+            <span class="d-block fw-semobold text-start">
+              <span class="text-dark fw-bold d-block fs-4 mb-2"
                 >Corporate Account</span
               >
-              <span class="text-gray-400 fw-bold fs-6"
+              <span class="text-gray-400 fw-semobold fs-6"
                 >Create corporate account to mane users</span
               >
             </span>
@@ -104,7 +93,10 @@
         </div>
         <!--end::Col-->
 
-        <ErrorMessage name="accountType"></ErrorMessage>
+        <ErrorMessage
+          name="accountType"
+          class="fv-plugins-message-container invalid-feedback"
+        ></ErrorMessage>
       </div>
       <!--end::Row-->
     </div>

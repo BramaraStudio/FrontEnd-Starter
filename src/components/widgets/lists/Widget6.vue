@@ -3,7 +3,7 @@
   <div class="card" :class="widgetClasses">
     <!--begin::Header-->
     <div class="card-header border-0">
-      <h3 class="card-title fw-bolder text-dark">Notifications</h3>
+      <h3 class="card-title fw-bold text-dark">Notifications</h3>
 
       <div class="card-toolbar">
         <!--begin::Menu-->
@@ -45,18 +45,16 @@
 
           <!--begin::Title-->
           <div class="flex-grow-1 me-2">
-            <a
-              href="#"
-              class="fw-bolder text-gray-800 text-hover-primary fs-6"
-              >{{ item.title }}</a
-            >
+            <a href="#" class="fw-bold text-gray-800 text-hover-primary fs-6">{{
+              item.title
+            }}</a>
 
-            <span class="text-muted fw-bold d-block">{{ item.text }}</span>
+            <span class="text-muted fw-semobold d-block">{{ item.text }}</span>
           </div>
           <!--end::Title-->
 
           <!--begin::Lable-->
-          <span :class="`text-${item.color}`" class="fw-bolder py-1">{{
+          <span :class="`text-${item.color}`" class="fw-bold py-1">{{
             item.number
           }}</span>
           <!--end::Lable-->
@@ -85,28 +83,28 @@ export default defineComponent({
     const list = ref([
       {
         color: "warning",
-        icon: "icons/duotune/abstract/abs027.svg",
+        icon: "media/icons/duotune/abstract/abs027.svg",
         title: "Group lunch celebration",
         text: "Due in 2 Days",
         number: "+28%",
       },
       {
         color: "success",
-        icon: "icons/duotune/art/art005.svg",
+        icon: "media/icons/duotune/art/art005.svg",
         title: "Navigation optimization",
         text: "Due in 2 Days",
         number: "+50%",
       },
       {
         color: "danger",
-        icon: "icons/duotune/communication/com012.svg",
+        icon: "media/icons/duotune/communication/com012.svg",
         title: "Rebrand strategy planning",
         text: "Due in 5 Days",
         number: "-27%",
       },
       {
         color: "info",
-        icon: "icons/duotune/communication/com012.svg",
+        icon: "media/icons/duotune/communication/com012.svg",
         title: "Product goals strategy",
         text: "Due in 7 Days",
         number: "+8%",

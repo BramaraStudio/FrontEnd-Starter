@@ -1,46 +1,80 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from "vue-router";
 import store from "@/store";
 import { Mutations, Actions } from "@/store/enums/StoreEnums";
+import JwtService from "@/core/services/JwtService";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     redirect: "/dashboard",
-    component: () => import("@/layout/Layout.vue"),
+    component: () => import("@/layouts/main-layout/MainLayout.vue"),
+    meta: {
+      middleware: "auth",
+    },
     children: [
       {
         path: "/dashboard",
         name: "dashboard",
         component: () => import("@/views/Dashboard.vue"),
+        meta: {
+          pageTitle: "Dashboard",
+          breadcrumbs: ["Dashboards"],
+        },
       },
     ],
   },
   {
     path: "/",
-    component: () => import("@/views/auth/Layout.vue"),
+    component: () => import("@/layouts/AuthLayout.vue"),
     children: [
       {
         path: "/sign-in",
         name: "sign-in",
-        component: () => import("@/views/auth/SignIn.vue"),
+        component: () => import("@/views/authentication/SignIn.vue"),
+        meta: {
+          pageTitle: "Sign In",
+        },
       },
       {
         path: "/sign-up",
         name: "sign-up",
-        component: () => import("@/views/auth/SignUp.vue"),
+        component: () => import("@/views/authentication/SignUp.vue"),
+        meta: {
+          pageTitle: "Sign Up",
+        },
       },
       {
         path: "/password-reset",
         name: "password-reset",
-        component: () => import("@/views/auth/PasswordReset.vue"),
+        component: () => import("@/views/authentication/PasswordReset.vue"),
+        meta: {
+          pageTitle: "Password reset",
+        },
       },
     ],
   },
   {
-    // the 404 route, when none of the above matches
-    path: "/404",
-    name: "404",
-    component: () => import("@/views/auth/Error404.vue"),
+    path: "/",
+    component: () => import("@/layouts/SystemLayout.vue"),
+    children: [
+      {
+        // the 404 route, when none of the above matches
+        path: "/404",
+        name: "404",
+        component: () => import("@/views/authentication/Error404.vue"),
+        meta: {
+          pageTitle: "Error 404",
+        },
+      },
+      {
+        path: "/500",
+        name: "500",
+        component: () => import("@/views/authentication/Error500.vue"),
+        meta: {
+          pageTitle: "Error 500",
+        },
+      },
+    ],
   },
   {
     path: "/:pathMatch(.*)*",
@@ -53,16 +87,21 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach(() => {
+router.beforeEach((to) => {
+  // current page view title
+  document.title = `${to.meta.pageTitle} - ${process.env.VUE_APP_NAME}`;
+
   // reset config to initial state
   store.commit(Mutations.RESET_LAYOUT_CONFIG);
 
-  store.dispatch(Actions.VERIFY_AUTH);
+  store.dispatch(Actions.VERIFY_AUTH, { api_token: JwtService.getToken() });
 
   // Scroll page to top on every route change
-  setTimeout(() => {
-    window.scrollTo(0, 0);
-  }, 100);
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
 });
 
 export default router;

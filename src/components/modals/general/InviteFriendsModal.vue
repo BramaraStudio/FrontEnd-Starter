@@ -34,16 +34,16 @@
             <!--end::Title-->
 
             <!--begin::Description-->
-            <div class="text-gray-400 fw-bold fs-5">
+            <div class="text-gray-400 fw-semobold fs-5">
               If you need more info, please check out
-              <a href="#" class="link-primary fw-bolder">FAQ Page</a>.
+              <a href="#" class="link-primary fw-bold">FAQ Page</a>.
             </div>
             <!--end::Description-->
           </div>
           <!--end::Heading-->
 
           <!--begin::Google Contacts Invite-->
-          <div class="btn btn-light-primary fw-bolder w-100 mb-8">
+          <div class="btn btn-light-primary fw-bold w-100 mb-8">
             <img
               alt="Logo"
               src="media/svg/brand-logos/google-icon.svg"
@@ -56,7 +56,7 @@
           <!--begin::Separator-->
           <div class="separator d-flex flex-center mb-8">
             <span
-              class="text-uppercase bg-white fs-7 fw-bold text-gray-400 px-3"
+              class="text-uppercase bg-body fs-7 fw-semobold text-gray-400 px-3"
               >or</span
             >
           </div>
@@ -74,7 +74,7 @@
           <!--begin::Users-->
           <div class="mb-10">
             <!--begin::Heading-->
-            <div class="fs-6 fw-bold mb-2">Your Invitations</div>
+            <div class="fs-6 fw-semobold mb-2">Your Invitations</div>
             <!--end::Heading-->
 
             <!--begin::List-->
@@ -82,12 +82,7 @@
               <template v-for="(user, index) in users" :key="index">
                 <!--begin::User-->
                 <div
-                  class="
-                    d-flex
-                    flex-stack
-                    py-4
-                    border-bottom border-gray-300 border-bottom-dashed
-                  "
+                  class="d-flex flex-stack py-4 border-bottom border-gray-300 border-bottom-dashed"
                 >
                   <!--begin::Details-->
                   <div class="d-flex align-items-center">
@@ -97,7 +92,7 @@
                       <span
                         v-else
                         :class="`bg-light-${user.state} text-${user.state}`"
-                        class="symbol-label fw-bold"
+                        class="symbol-label fw-semobold"
                       >
                         {{ user.name.charAt(0) }}
                       </span>
@@ -108,16 +103,13 @@
                     <div class="ms-5">
                       <a
                         href="#"
-                        class="
-                          fs-5
-                          fw-bolder
-                          text-gray-900 text-hover-primary
-                          mb-2
-                        "
+                        class="fs-5 fw-bold text-gray-900 text-hover-primary mb-2"
                         >{{ user.name }}</a
                       >
 
-                      <div class="fw-bold text-gray-400">{{ user.email }}</div>
+                      <div class="fw-semobold text-gray-400">
+                        {{ user.email }}
+                      </div>
                     </div>
                     <!--end::Details-->
                   </div>
@@ -148,7 +140,7 @@
           <!--begin::Notice-->
           <div class="d-flex flex-stack">
             <!--begin::Label-->
-            <div class="me-5 fw-bold">
+            <div class="me-5 fw-semobold">
               <label class="fs-6">Adding Users by Team Members</label>
               <div class="fs-7 text-gray-400">
                 If you need more info, please check budget planning
@@ -167,7 +159,7 @@
                 checked="checked"
               />
 
-              <span class="form-check-label fw-bold text-gray-400">
+              <span class="form-check-label fw-semobold text-gray-400">
                 Allowed
               </span>
             </label>
@@ -193,7 +185,7 @@ export default defineComponent({
   setup() {
     const users = [
       {
-        avatar: "media/avatars/150-1.jpg",
+        avatar: "media/avatars/300-6.jpg",
         name: "Emma Smith",
         email: "e.smith@kpmg.com.au",
         access: "1",
@@ -205,19 +197,19 @@ export default defineComponent({
         access: "1",
       },
       {
-        avatar: "media/avatars/150-2.jpg",
+        avatar: "media/avatars/300-1.jpg",
         name: "Max Smith",
         email: "max@kt.com",
         access: "3",
       },
       {
-        avatar: "media/avatars/150-2.jpg",
+        avatar: "media/avatars/300-1.jpg",
         name: "Sean Bean",
         email: "sean@dellito.com",
         access: "2",
       },
       {
-        avatar: "media/avatars/150-15.jpg",
+        avatar: "media/avatars/300-25.jpg",
         name: "Brian Cox",
         email: "brian@exchange.com",
         access: "3",
@@ -229,7 +221,7 @@ export default defineComponent({
         access: "2",
       },
       {
-        avatar: "media/avatars/150-8.jpg",
+        avatar: "media/avatars/300-9.jpg",
         name: "Francis Mitcham",
         email: "f.mitcham@kpmg.com.au",
         access: "3",
@@ -247,7 +239,7 @@ export default defineComponent({
         access: "1",
       },
       {
-        avatar: "media/avatars/150-6.jpg",
+        avatar: "media/avatars/300-23.jpg",
         name: "Dan Wilson",
         email: "dam@consilting.com",
         access: "3",
@@ -259,7 +251,7 @@ export default defineComponent({
         access: "2",
       },
       {
-        avatar: "media/avatars/150-7.jpg",
+        avatar: "media/avatars/300-12.jpg",
         name: "Ana Crown",
         email: "ana.cf@limtel.com",
         access: "1",
@@ -271,7 +263,7 @@ export default defineComponent({
         access: "3",
       },
       {
-        avatar: "media/avatars/150-17.jpg",
+        avatar: "media/avatars/300-13.jpg",
         name: "John Miller",
         email: "miller@mapple.com",
         access: "3",
@@ -283,13 +275,13 @@ export default defineComponent({
         access: "2",
       },
       {
-        state: "media/avatars/150-10.jpg",
+        state: "media/avatars/300-21.jpg",
         name: "Ethan Wilder",
         email: "ethan@loop.com.au",
         access: "1",
       },
       {
-        state: "media/avatars/150-7.jpg",
+        state: "media/avatars/300-12.jpg",
         name: "Ana Crown",
         email: "ana.cf@limtel.com",
         access: "3",

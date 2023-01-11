@@ -2,7 +2,7 @@
   <!--begin::Toolbar-->
   <div class="d-flex flex-wrap flex-stack my-5">
     <!--begin::Heading-->
-    <h2 class="fs-2 fw-bold my-2">
+    <h2 class="fs-2 fw-semobold my-2">
       Projects
       <span class="fs-6 text-gray-400 ms-1">by Status</span>
     </h2>
@@ -17,7 +17,7 @@
           name="status"
           data-control="select2"
           data-hide-search="true"
-          class="form-select form-select-white form-select-sm fw-bolder w-125px"
+          class="form-select form-select-white form-select-sm fw-bold w-125px"
         >
           <option value="Active" selected>Active</option>
           <option value="Approved">In Progress</option>
@@ -163,7 +163,7 @@
 
     <!--begin::Pagination-->
     <div class="d-flex flex-stack flex-wrap pt-10">
-      <div class="fs-6 fw-bold text-gray-700">
+      <div class="fs-6 fw-semobold text-gray-700">
         Showing 1 to 10 of 50 entries
       </div>
 
@@ -208,34 +208,29 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
+import { defineComponent } from "vue";
 import KTCard from "@/components/cards/Card1.vue";
-import { setCurrentPageBreadcrumbs } from "@/core/helpers/breadcrumb";
 
 export default defineComponent({
-  name: "projects",
+  name: "profile-projects",
   components: {
     KTCard,
   },
   setup() {
-    onMounted(() => {
-      setCurrentPageBreadcrumbs("Projects", ["Pages", "Profile"]);
-    });
-
     const users1 = [
-      { name: "Emma Smith", src: "media/avatars/150-1.jpg" },
-      { name: "Rudy Stone", src: "media/avatars/150-2.jpg" },
+      { name: "Emma Smith", src: "media/avatars/300-6.jpg" },
+      { name: "Rudy Stone", src: "media/avatars/300-1.jpg" },
       { name: "Susan Redwood", initials: "S", state: "primary" },
     ];
 
     const users2 = [
       { name: "Alan Warden", initials: "A", state: "warning" },
-      { name: "Brian Cox", src: "media/avatars/150-4.jpg" },
+      { name: "Brian Cox", src: "media/avatars/300-5.jpg" },
     ];
 
     const users3 = [
-      { name: "Mad Masy", src: "media/avatars/150-1.jpg" },
-      { name: "Cris Willson", src: "media/avatars/150-2.jpg" },
+      { name: "Mad Masy", src: "media/avatars/300-6.jpg" },
+      { name: "Cris Willson", src: "media/avatars/300-1.jpg" },
       { name: "Mike Garcie", initials: "M", state: "info" },
     ];
 
@@ -245,30 +240,30 @@ export default defineComponent({
     ];
 
     const users5 = [
-      { name: "Francis Mitcham", src: "media/avatars/150-5.jpg" },
-      { name: "Michelle Swanston", src: "media/avatars/150-13.jpg" },
+      { name: "Francis Mitcham", src: "media/avatars/300-20.jpg" },
+      { name: "Michelle Swanston", src: "media/avatars/300-7.jpg" },
       { name: "Susan Redwood", initials: "S", state: "primary" },
     ];
 
     const users6 = [
-      { name: "Emma Smith", src: "media/avatars/150-1.jpg" },
-      { name: "Rudy Stone", src: "media/avatars/150-2.jpg" },
+      { name: "Emma Smith", src: "media/avatars/300-6.jpg" },
+      { name: "Rudy Stone", src: "media/avatars/300-1.jpg" },
       { name: "Susan Redwood", initials: "S", state: "primary" },
     ];
 
     const users7 = [
-      { name: "Meloday Macy", src: "media/avatars/150-3.jpg" },
+      { name: "Meloday Macy", src: "media/avatars/300-2.jpg" },
       { name: "Rabbin Watterman", initials: "S", state: "success" },
     ];
 
     const users8 = [
-      { name: "Emma Smith", src: "media/avatars/150-1.jpg" },
-      { name: "Rudy Stone", src: "media/avatars/150-2.jpg" },
+      { name: "Emma Smith", src: "media/avatars/300-6.jpg" },
+      { name: "Rudy Stone", src: "media/avatars/300-1.jpg" },
       { name: "Susan Redwood", initials: "S", state: "primary" },
     ];
 
     const users9 = [
-      { name: "Meloday Macy", src: "media/avatars/150-3.jpg" },
+      { name: "Meloday Macy", src: "media/avatars/300-2.jpg" },
       { name: "Rabbin Watterman", initials: "S", state: "danger" },
     ];
 

@@ -4,11 +4,15 @@
 
 // Button
 .btn {
+	--#{$prefix}btn-color: var(--kt-body-color);
+	--#{$prefix}btn-bg: transparent;
+	--#{$prefix}btn-border-color: transparent;
+
 	// Reset outline
 	outline: none !important;	
 
 	// Reset focus shadow
-	&:not(.btn-shadow):not(.shadow):not(.shadow-sm):not(.shadow-lg) {
+	&:not(.btn-shadow):not(.shadow):not(.shadow-sm):not(.shadow-lg):not(.shadow-xs) {
 		box-shadow: none !important;
 	}
 
@@ -35,10 +39,15 @@
 		text-decoration: none;
 		font-weight: $btn-font-weight;
 	}
+ 
+	// Outline
+	&.btn-outline:not(.btn-outline-dashed) {
+		border: 1px solid var(--kt-input-border-color);
+	}
 
 	// Outline dashed
 	&.btn-outline-dashed {
-		border: 1px dashed $border-dashed-color;
+		border: 1px dashed var(--kt-input-border-color);
 	}
 
 	// Flush
@@ -51,6 +60,18 @@
 		display: inline-flex;
 		align-items: center;
 	}
+
+	// Align start
+	&.btn-trim-start {
+		justify-content: flex-start !important;
+		padding-left: 0 !important;		
+	}
+
+	// Align start
+	&.btn-trim-end {
+		justify-content: flex-end !important;
+		padding-right: 0 !important;	
+	} 
 }
 
 // Icons
@@ -89,6 +110,7 @@
 		&.btn-sm {
 			height: $input-height-sm;
 			width: $input-height-sm;
+			 
 		}
 
 		&.btn-lg {

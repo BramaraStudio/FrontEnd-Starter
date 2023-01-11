@@ -86,7 +86,7 @@
                   <!--begin::Heading-->
                   <div class="pb-10 pb-lg-15">
                     <!--begin::Title-->
-                    <h2 class="fw-bolder d-flex align-items-center text-dark">
+                    <h2 class="fw-bold d-flex align-items-center text-dark">
                       Choose Account Type
                       <i
                         class="fas fa-exclamation-circle ms-2 fs-7"
@@ -97,9 +97,9 @@
                     <!--end::Title-->
 
                     <!--begin::Notice-->
-                    <div class="text-gray-400 fw-bold fs-6">
+                    <div class="text-gray-400 fw-semobold fs-6">
                       If you need more info, please check out
-                      <a href="#" class="link-primary fw-bolder">Help Page</a>.
+                      <a href="#" class="link-primary fw-bold">Help Page</a>.
                     </div>
                     <!--end::Notice-->
                   </div>
@@ -122,16 +122,7 @@
                           v-model="formData.accountType"
                         />
                         <label
-                          class="
-                            btn
-                            btn-outline
-                            btn-outline-dashed
-                            btn-outline-default
-                            p-7
-                            d-flex
-                            align-items-center
-                            mb-10
-                          "
+                          class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center mb-10"
                           for="kt_create_account_form_account_type_personal"
                         >
                           <span class="svg-icon svg-icon-3x me-5">
@@ -141,11 +132,11 @@
                           </span>
 
                           <!--begin::Info-->
-                          <span class="d-block fw-bold text-start">
-                            <span class="text-dark fw-bolder d-block fs-4 mb-2">
+                          <span class="d-block fw-semobold text-start">
+                            <span class="text-dark fw-bold d-block fs-4 mb-2">
                               Personal Account
                             </span>
-                            <span class="text-gray-400 fw-bold fs-6"
+                            <span class="text-gray-400 fw-semobold fs-6"
                               >If you need more info, please check it out</span
                             >
                           </span>
@@ -167,15 +158,7 @@
                           v-model="formData.accountType"
                         />
                         <label
-                          class="
-                            btn
-                            btn-outline
-                            btn-outline-dashed
-                            btn-outline-default
-                            p-7
-                            d-flex
-                            align-items-center
-                          "
+                          class="btn btn-outline btn-outline-dashed btn-outline-default p-7 d-flex align-items-center"
                           for="kt_create_account_form_account_type_corporate"
                         >
                           <span class="svg-icon svg-icon-3x me-5">
@@ -185,11 +168,11 @@
                           </span>
 
                           <!--begin::Info-->
-                          <span class="d-block fw-bold text-start">
-                            <span class="text-dark fw-bolder d-block fs-4 mb-2"
+                          <span class="d-block fw-semobold text-start">
+                            <span class="text-dark fw-bold d-block fs-4 mb-2"
                               >Corporate Account</span
                             >
-                            <span class="text-gray-400 fw-bold fs-6"
+                            <span class="text-gray-400 fw-semobold fs-6"
                               >Create corporate account to mane users</span
                             >
                           </span>
@@ -214,13 +197,13 @@
                   <!--begin::Heading-->
                   <div class="pb-10 pb-lg-15">
                     <!--begin::Title-->
-                    <h2 class="fw-bolder text-dark">Account Info</h2>
+                    <h2 class="fw-bold text-dark">Account Info</h2>
                     <!--end::Title-->
 
                     <!--begin::Notice-->
-                    <div class="text-gray-400 fw-bold fs-6">
+                    <div class="text-gray-400 fw-semobold fs-6">
                       If you need more info, please check out
-                      <a href="#" class="link-primary fw-bolder">Help Page</a>.
+                      <a href="#" class="link-primary fw-bold">Help Page</a>.
                     </div>
                     <!--end::Notice-->
                   </div>
@@ -254,17 +237,10 @@
                           v-model="formData.teamSize"
                         />
                         <label
-                          class="
-                            btn
-                            btn-outline
-                            btn-outline-dashed
-                            btn-outline-default
-                            w-100
-                            p-4
-                          "
+                          class="btn btn-outline btn-outline-dashed btn-outline-default w-100 p-4"
                           for="kt_one_one_select"
                         >
-                          <span class="fw-bolder fs-3">1-1</span>
+                          <span class="fw-bold fs-3">1-1</span>
                         </label>
                         <!--end::Option-->
                       </div>
@@ -282,17 +258,10 @@
                           v-model="formData.teamSize"
                         />
                         <label
-                          class="
-                            btn
-                            btn-outline
-                            btn-outline-dashed
-                            btn-outline-default
-                            w-100
-                            p-4
-                          "
+                          class="btn btn-outline btn-outline-dashed btn-outline-default w-100 p-4"
                           for="kt_two_ten_select"
                         >
-                          <span class="fw-bolder fs-3">2-10</span>
+                          <span class="fw-bold fs-3">2-10</span>
                         </label>
                         <!--end::Option-->
                       </div>
@@ -310,17 +279,10 @@
                           v-model="formData.teamSize"
                         />
                         <label
-                          class="
-                            btn
-                            btn-outline
-                            btn-outline-dashed
-                            btn-outline-default
-                            w-100
-                            p-4
-                          "
+                          class="btn btn-outline btn-outline-dashed btn-outline-default w-100 p-4"
                           for="kt_ten_fifty_select"
                         >
-                          <span class="fw-bolder fs-3">10-50</span>
+                          <span class="fw-bold fs-3">10-50</span>
                         </label>
                         <!--end::Option-->
                       </div>
@@ -338,17 +300,10 @@
                           v-model="formData.teamSize"
                         />
                         <label
-                          class="
-                            btn
-                            btn-outline
-                            btn-outline-dashed
-                            btn-outline-default
-                            w-100
-                            p-4
-                          "
+                          class="btn btn-outline btn-outline-dashed btn-outline-default w-100 p-4"
                           for="kt_fifty_select"
                         >
-                          <span class="fw-bolder fs-3">50+</span>
+                          <span class="fw-bold fs-3">50+</span>
                         </label>
                         <!--end::Option-->
                       </div>
@@ -423,14 +378,10 @@
                           <!--begin::Description-->
                           <span class="d-flex flex-column">
                             <span
-                              class="
-                                fw-bolder
-                                text-gray-800 text-hover-primary
-                                fs-5
-                              "
+                              class="fw-bold text-gray-800 text-hover-primary fs-5"
                               >Company Account</span
                             >
-                            <span class="fs-6 fw-bold text-gray-400"
+                            <span class="fs-6 fw-semobold text-gray-400"
                               >Use images to enhance your post flow</span
                             >
                           </span>
@@ -475,14 +426,10 @@
                           <!--begin::Description-->
                           <span class="d-flex flex-column">
                             <span
-                              class="
-                                fw-bolder
-                                text-gray-800 text-hover-primary
-                                fs-5
-                              "
+                              class="fw-bold text-gray-800 text-hover-primary fs-5"
                               >Developer Account</span
                             >
-                            <span class="fs-6 fw-bold text-gray-400"
+                            <span class="fs-6 fw-semobold text-gray-400"
                               >Use images to your post time</span
                             >
                           </span>
@@ -528,14 +475,10 @@
                           <!--begin::Description-->
                           <span class="d-flex flex-column">
                             <span
-                              class="
-                                fw-bolder
-                                text-gray-800 text-hover-primary
-                                fs-5
-                              "
+                              class="fw-bold text-gray-800 text-hover-primary fs-5"
                               >Testing Account</span
                             >
-                            <span class="fs-6 fw-bold text-gray-400"
+                            <span class="fs-6 fw-semobold text-gray-400"
                               >Use images to enhance time travel rivers</span
                             >
                           </span>
@@ -574,13 +517,13 @@
                   <!--begin::Heading-->
                   <div class="pb-10 pb-lg-12">
                     <!--begin::Title-->
-                    <h2 class="fw-bolder text-dark">Business Details</h2>
+                    <h2 class="fw-bold text-dark">Business Details</h2>
                     <!--end::Title-->
 
                     <!--begin::Notice-->
-                    <div class="text-gray-400 fw-bold fs-6">
+                    <div class="text-gray-400 fw-semobold fs-6">
                       If you need more info, please check out
-                      <a href="#" class="link-primary fw-bolder">Help Page</a>.
+                      <a href="#" class="link-primary fw-bold">Help Page</a>.
                     </div>
                     <!--end::Notice-->
                   </div>
@@ -625,14 +568,14 @@
                             <div class='fw-bold'>INCBANK **** 1245 STATEMENT</div>
                         </div>
 
-                        <div class='d-flex flex-stack fw-bold text-gray-600'>
+                        <div class='d-flex flex-stack fw-semobold text-gray-600'>
                             <div>Amount</div>
                             <div>Transaction</div>
                         </div>
 
                         <div class='separator separator-dashed my-2'></div>
 
-                        <div class='d-flex flex-stack text-dark fw-bolder mb-2'>
+                        <div class='d-flex flex-stack text-dark fw-bold mb-2'>
                             <div>USD345.00</div>
                             <div>KEENTHEMES*</div>
                         </div>
@@ -731,7 +674,7 @@
                   <!--begin::Input group-->
                   <div class="fv-row mb-0">
                     <!--begin::Label-->
-                    <label class="fs-6 fw-bold form-label required"
+                    <label class="fs-6 fw-semobold form-label required"
                       >Contact Email</label
                     >
                     <!--end::Label-->
@@ -761,13 +704,13 @@
                   <!--begin::Heading-->
                   <div class="pb-10 pb-lg-15">
                     <!--begin::Title-->
-                    <h2 class="fw-bolder text-dark">Billing Details</h2>
+                    <h2 class="fw-bold text-dark">Billing Details</h2>
                     <!--end::Title-->
 
                     <!--begin::Notice-->
-                    <div class="text-gray-400 fw-bold fs-6">
+                    <div class="text-gray-400 fw-semobold fs-6">
                       If you need more info, please check out
-                      <a href="#" class="text-primary fw-bolder">Help Page</a>.
+                      <a href="#" class="text-primary fw-bold">Help Page</a>.
                     </div>
                     <!--end::Notice-->
                   </div>
@@ -777,14 +720,7 @@
                   <div class="d-flex flex-column mb-7 fv-row">
                     <!--begin::Label-->
                     <label
-                      class="
-                        d-flex
-                        align-items-center
-                        fs-6
-                        fw-bold
-                        form-label
-                        mb-2
-                      "
+                      class="d-flex align-items-center fs-6 fw-semobold form-label mb-2"
                     >
                       <span class="required">Name On Card</span>
                       <i
@@ -812,7 +748,7 @@
                   <!--begin::Input group-->
                   <div class="d-flex flex-column mb-7 fv-row">
                     <!--begin::Label-->
-                    <label class="required fs-6 fw-bold form-label mb-2"
+                    <label class="required fs-6 fw-semobold form-label mb-2"
                       >Card Number</label
                     >
                     <!--end::Label-->
@@ -835,13 +771,7 @@
 
                       <!--begin::Card logos-->
                       <div
-                        class="
-                          position-absolute
-                          translate-middle-y
-                          top-50
-                          end-0
-                          me-5
-                        "
+                        class="position-absolute translate-middle-y top-50 end-0 me-5"
                       >
                         <img
                           src="media/svg/card-logos/visa.svg"
@@ -870,7 +800,7 @@
                     <!--begin::Col-->
                     <div class="col-md-8 fv-row">
                       <!--begin::Label-->
-                      <label class="required fs-6 fw-bold form-label mb-2"
+                      <label class="required fs-6 fw-semobold form-label mb-2"
                         >Expiration Date</label
                       >
                       <!--end::Label-->
@@ -936,14 +866,7 @@
                     <div class="col-md-4 fv-row">
                       <!--begin::Label-->
                       <label
-                        class="
-                          d-flex
-                          align-items-center
-                          fs-6
-                          fw-bold
-                          form-label
-                          mb-2
-                        "
+                        class="d-flex align-items-center fs-6 fw-semobold form-label mb-2"
                       >
                         <span class="required">CVV</span>
                         <i
@@ -969,13 +892,7 @@
 
                         <!--begin::CVV icon-->
                         <div
-                          class="
-                            position-absolute
-                            translate-middle-y
-                            top-50
-                            end-0
-                            me-3
-                          "
+                          class="position-absolute translate-middle-y top-50 end-0 me-3"
                         >
                           <span class="svg-icon svg-icon-2hx">
                             <inline-svg
@@ -1000,10 +917,10 @@
                   <div class="d-flex flex-stack">
                     <!--begin::Label-->
                     <div class="me-5">
-                      <label class="fs-6 fw-bold form-label"
+                      <label class="fs-6 fw-semobold form-label"
                         >Save Card for further billing?</label
                       >
-                      <div class="fs-7 fw-bold text-gray-400">
+                      <div class="fs-7 fw-semobold text-gray-400">
                         If you need more info, please check budget planning
                       </div>
                     </div>
@@ -1011,12 +928,7 @@
 
                     <!--begin::Switch-->
                     <label
-                      class="
-                        form-check
-                        form-switch
-                        form-check-custom
-                        form-check-solid
-                      "
+                      class="form-check form-switch form-check-custom form-check-solid"
                     >
                       <input
                         class="form-check-input"
@@ -1024,7 +936,7 @@
                         value="1"
                         checked="checked"
                       />
-                      <span class="form-check-label fw-bold text-gray-400">
+                      <span class="form-check-label fw-semobold text-gray-400">
                         Save Card
                       </span>
                     </label>
@@ -1043,13 +955,13 @@
                   <!--begin::Heading-->
                   <div class="pb-8 pb-lg-10">
                     <!--begin::Title-->
-                    <h2 class="fw-bolder text-dark">Your Are Done!</h2>
+                    <h2 class="fw-bold text-dark">Your Are Done!</h2>
                     <!--end::Title-->
 
                     <!--begin::Notice-->
-                    <div class="text-gray-400 fw-bold fs-6">
+                    <div class="text-gray-400 fw-semobold fs-6">
                       If you need more info, please
-                      <router-link to="/sign-in" class="link-primary fw-bolder"
+                      <router-link to="/sign-in" class="link-primary fw-bold"
                         >Sign In</router-link
                       >.
                     </div>
@@ -1070,14 +982,7 @@
 
                     <!--begin::Alert-->
                     <div
-                      class="
-                        notice
-                        d-flex
-                        bg-light-warning
-                        rounded
-                        border-warning border border-dashed
-                        p-6
-                      "
+                      class="notice d-flex bg-light-warning rounded border-warning border border-dashed p-6"
                     >
                       <!--begin::Icon-->
                       <span class="svg-icon svg-icon-2tx svg-icon-warning me-4">
@@ -1089,15 +994,13 @@
                       <!--begin::Wrapper-->
                       <div class="d-flex flex-stack flex-grow-1">
                         <!--begin::Content-->
-                        <div class="fw-bold">
-                          <h4 class="text-gray-800 fw-bolder">
+                        <div class="fw-semobold">
+                          <h4 class="text-gray-800 fw-bold">
                             We need your attention!
                           </h4>
                           <div class="fs-6 text-gray-600">
                             To start using great tools, please, please
-                            <a href="#" class="fw-bolder"
-                              >Create Team Platform</a
-                            >
+                            <a href="#" class="fw-bold">Create Team Platform</a>
                           </div>
                         </div>
                         <!--end::Content-->
@@ -1141,17 +1044,15 @@
                     <span class="indicator-label">
                       Submit
                       <span class="svg-icon svg-icon-3 ms-2 me-0">
-                        <inline-svg src="icons/duotune/arrows/arr064.svg" />
+                        <inline-svg
+                          src="media/icons/duotune/arrows/arr064.svg"
+                        />
                       </span>
                     </span>
                     <span class="indicator-progress">
                       Please wait...
                       <span
-                        class="
-                          spinner-border spinner-border-sm
-                          align-middle
-                          ms-2
-                        "
+                        class="spinner-border spinner-border-sm align-middle ms-2"
                       ></span>
                     </span>
                   </button>
@@ -1305,6 +1206,12 @@ export default defineComponent({
     };
 
     const handleStep = handleSubmit((values) => {
+      resetForm({
+        values: {
+          ...formData.value,
+        },
+      });
+
       for (const item in values) {
         // eslint-disable-next-line no-prototype-builtins
         if (values.hasOwnProperty(item)) {
@@ -1330,18 +1237,12 @@ export default defineComponent({
         buttonsStyling: false,
         confirmButtonText: "Ok, got it!",
         customClass: {
-          confirmButton: "btn fw-bold btn-light-primary",
+          confirmButton: "btn fw-semobold btn-light-primary",
         },
       }).then(() => {
         hideModal(createAccountModalRef.value);
       });
     };
-
-    resetForm({
-      values: {
-        ...formData.value,
-      },
-    });
 
     return {
       createAccountRef,

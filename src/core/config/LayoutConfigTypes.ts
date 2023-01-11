@@ -7,6 +7,10 @@ interface Main {
   };
 }
 
+interface Illustrations {
+  set: "dozzy-1" | "sigma-1" | "sketchy-1" | "unitedpalms-1";
+}
+
 interface Loader {
   logo: string;
   display: boolean;
@@ -29,9 +33,14 @@ interface Header {
   fixed: Fixed;
 }
 
+interface PageTitle {
+  display: boolean;
+  breadcrumb: boolean;
+  direction: string;
+}
+
 interface Aside {
   display: boolean;
-  secondaryDisplay: boolean;
   theme: "dark" | "light";
   fixed: boolean;
   menuIcon: "svg" | "font";
@@ -59,10 +68,12 @@ interface LayoutConfig {
   themeVersion: string;
   demo: string;
   main: Main;
+  illustrations: Illustrations;
   loader: Loader;
   scrollTop: ScrollTop;
   header: Header;
   toolbar: Toolbar;
+  pageTitle: PageTitle;
   aside: Aside;
   content: Content;
   footer: Footer;
@@ -72,6 +83,7 @@ export default LayoutConfig;
 
 export {
   Main,
+  Illustrations,
   Loader,
   ScrollTop,
   Fixed,

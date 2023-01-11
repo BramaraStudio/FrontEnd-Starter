@@ -42,22 +42,6 @@ export const headerLeft = computed(() => {
 });
 
 /**
- * Returns header fixed on desktop
- * @returns {boolean}
- */
-export const headerFixed = computed(() => {
-  return store.getters.layoutConfig("header.fixed.desktop");
-});
-
-/**
- * Returns header fixed on tablet and mobile
- * @returns {boolean}
- */
-export const headerFixedOnMobile = computed(() => {
-  return store.getters.layoutConfig("header.fixed.tabletAndMobile");
-});
-
-/**
  * Set the aside display
  * @returns {boolean}
  */
@@ -66,27 +50,11 @@ export const asideDisplay = computed(() => {
 });
 
 /**
- * Aside secondary minimized by default
+ * Aside minimized
  * @returns {boolean}
  */
-export const minimizedAsideSecondary = computed(() => {
+export const asideMinimized = computed(() => {
   return store.getters.layoutConfig("aside.minimized");
-});
-
-/**
- * Aside minimization enabled
- * @returns {boolean}
- */
-export const minimizationEnabled = computed(() => {
-  return store.getters.layoutConfig("aside.minimize");
-});
-
-/**
- * Aside secondary display
- * @returns {boolean}
- */
-export const asideSecondaryDisplay = computed(() => {
-  return store.getters.layoutConfig("aside.secondaryDisplay");
 });
 
 /**
@@ -103,6 +71,30 @@ export const toolbarWidthFluid = computed(() => {
  */
 export const toolbarDisplay = computed(() => {
   return store.getters.layoutConfig("toolbar.display");
+});
+
+/**
+ * Page title display
+ * @returns {boolean}
+ */
+export const pageTitleDisplay = computed(() => {
+  return store.getters.layoutConfig("pageTitle.display");
+});
+
+/**
+ * Page title breadcrumb display
+ * @returns {boolean}
+ */
+export const pageTitleBreadcrumbDisplay = computed(() => {
+  return store.getters.layoutConfig("pageTitle.breadcrumb");
+});
+
+/**
+ * Page title direction display
+ * @returns { "row" | "column" }
+ */
+export const pageTitleDirection = computed(() => {
+  return store.getters.layoutConfig("pageTitle.direction");
 });
 
 /**
@@ -183,4 +175,12 @@ export const themeDarkLogo = computed(() => {
  */
 export const headerMenuIcons = computed(() => {
   return store.getters.layoutConfig("header.menuIcon");
+});
+
+/**
+ * Illustrations set
+ * @returns {string}
+ */
+export const illustrationsSet = computed(() => {
+  return store.getters.layoutConfig("illustrations.set");
 });

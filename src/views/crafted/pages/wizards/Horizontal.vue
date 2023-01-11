@@ -152,7 +152,6 @@ import Step2 from "@/components/wizard/steps/Step2.vue";
 import Step3 from "@/components/wizard/steps/Step3.vue";
 import Step4 from "@/components/wizard/steps/Step4.vue";
 import Step5 from "@/components/wizard/steps/Step5.vue";
-import { setCurrentPageBreadcrumbs } from "@/core/helpers/breadcrumb";
 
 interface IStep1 {
   accountType: string;
@@ -219,8 +218,6 @@ export default defineComponent({
       _stepperObj.value = StepperComponent.createInsance(
         horizontalWizardRef.value as HTMLElement
       );
-
-      setCurrentPageBreadcrumbs("Horizontal", ["Pages", "Wizards"]);
     });
 
     const createAccountSchema = [
@@ -265,19 +262,21 @@ export default defineComponent({
       return _stepperObj.value.totatStepsNumber;
     });
 
-    resetForm({
-      values: {
-        ...formData.value,
-      },
-    });
-
     const handleStep = handleSubmit((values) => {
-      console.log(values);
+      resetForm({
+        values: {
+          ...formData.value,
+        },
+      });
 
-      formData.value = {
-        ...formData.value,
-        ...values,
-      };
+      for (const item in values) {
+        // eslint-disable-next-line no-prototype-builtins
+        if (values.hasOwnProperty(item)) {
+          if (values[item]) {
+            formData.value[item] = values[item];
+          }
+        }
+      }
 
       currentStepIndex.value++;
 
@@ -305,7 +304,7 @@ export default defineComponent({
         buttonsStyling: false,
         confirmButtonText: "Ok, got it!",
         customClass: {
-          confirmButton: "btn fw-bold btn-light-primary",
+          confirmButton: "btn fw-semobold btn-light-primary",
         },
       }).then(() => {
         window.location.reload();

@@ -12,8 +12,8 @@ interface StoreInfo {
 
 @Module
 export default class ConfigModule extends VuexModule implements StoreInfo {
-  config = layoutConfig;
-  initial = layoutConfig;
+  config: LayoutConfigTypes = layoutConfig;
+  initial: LayoutConfigTypes = layoutConfig;
 
   /**
    * Get config from layout config
@@ -26,8 +26,10 @@ export default class ConfigModule extends VuexModule implements StoreInfo {
   }
 
   @Mutation
-  [Mutations.SET_LAYOUT_CONFIG](payload): void {
-    this.config = payload;
+  [Mutations.SET_LAYOUT_CONFIG_PROPERTY](payload): void {
+    const { property, value } = payload;
+    objectPath.set(this.config, property, value);
+    localStorage.setItem("config", JSON.stringify(this.config));
   }
 
   @Mutation

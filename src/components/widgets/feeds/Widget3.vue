@@ -9,16 +9,16 @@
         <div class="d-flex align-items-center flex-grow-1">
           <!--begin::Avatar-->
           <div class="symbol symbol-45px me-5">
-            <img src="media/avatars/150-10.jpg" alt="" />
+            <img src="media/avatars/300-21.jpg" alt="" />
           </div>
           <!--end::Avatar-->
 
           <!--begin::Info-->
           <div class="d-flex flex-column">
-            <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder"
+            <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold"
               >Carles Nilson</a
             >
-            <span class="text-gray-400 fw-bold">Yestarday at 5:06 PM</span>
+            <span class="text-gray-400 fw-semobold">Yestarday at 5:06 PM</span>
           </div>
           <!--end::Info-->
         </div>
@@ -28,9 +28,7 @@
         <div class="my-0">
           <button
             type="button"
-            class="
-              btn btn-sm btn-icon btn-color-primary btn-active-light-primary
-            "
+            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
             data-kt-menu-trigger="click"
             data-kt-menu-placement="bottom-end"
             data-kt-menu-flip="top-end"
@@ -59,12 +57,7 @@
         <div class="d-flex align-items-center mb-5">
           <a
             href="#"
-            class="
-              btn btn-sm btn-light btn-color-muted btn-active-light-success
-              px-4
-              py-2
-              me-4
-            "
+            class="btn btn-sm btn-light btn-color-muted btn-active-light-success px-4 py-2 me-4"
           >
             <span class="svg-icon svg-icon-3">
               <inline-svg src="media/icons/duotune/communication/com012.svg" />
@@ -74,11 +67,7 @@
 
           <a
             href="#"
-            class="
-              btn btn-sm btn-light btn-color-muted btn-active-light-danger
-              px-4
-              py-2
-            "
+            class="btn btn-sm btn-light btn-color-muted btn-active-light-danger px-4 py-2"
           >
             <span class="svg-icon svg-icon-2">
               <inline-svg src="media/icons/duotune/general/gen030.svg" />
@@ -96,7 +85,7 @@
         <div class="d-flex mb-5">
           <!--begin::Avatar-->
           <div class="symbol symbol-45px me-5">
-            <img src="media/avatars/150-11.jpg" alt="" />
+            <img src="media/avatars/300-14.jpg" alt="" />
           </div>
           <!--end::Avatar-->
 
@@ -104,17 +93,15 @@
           <div class="d-flex flex-column flex-row-fluid">
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mb-1">
-              <a
-                href="#"
-                class="text-gray-800 text-hover-primary fw-bolder me-2"
+              <a href="#" class="text-gray-800 text-hover-primary fw-bold me-2"
                 >Alice Danchik</a
               >
 
-              <span class="text-gray-400 fw-bold fs-7">1 day</span>
+              <span class="text-gray-400 fw-semobold fs-7">1 day</span>
 
               <a
                 href="#"
-                class="ms-auto text-gray-400 text-hover-primary fw-bold fs-7"
+                class="ms-auto text-gray-400 text-hover-primary fw-semobold fs-7"
                 >Reply</a
               >
             </div>
@@ -135,7 +122,7 @@
         <div class="d-flex">
           <!--begin::Avatar-->
           <div class="symbol symbol-45px me-5">
-            <img src="media/avatars/150-8.jpg" alt="" />
+            <img src="media/avatars/300-9.jpg" alt="" />
           </div>
           <!--end::Avatar-->
 
@@ -143,17 +130,15 @@
           <div class="d-flex flex-column flex-row-fluid">
             <!--begin::Info-->
             <div class="d-flex align-items-center flex-wrap mb-1">
-              <a
-                href="#"
-                class="text-gray-800 text-hover-primary fw-bolder me-2"
+              <a href="#" class="text-gray-800 text-hover-primary fw-bold me-2"
                 >Harris Bold</a
               >
 
-              <span class="text-gray-400 fw-bold fs-7">2 days</span>
+              <span class="text-gray-400 fw-semobold fs-7">2 days</span>
 
               <a
                 href="#"
-                class="ms-auto text-gray-400 text-hover-primary fw-bold fs-7"
+                class="ms-auto text-gray-400 text-hover-primary fw-semobold fs-7"
                 >Reply</a
               >
             </div>

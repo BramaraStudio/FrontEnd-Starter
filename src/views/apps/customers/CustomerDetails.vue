@@ -11,83 +11,64 @@
           <div class="d-flex flex-center flex-column mb-5">
             <!--begin::Avatar-->
             <div class="symbol symbol-100px symbol-circle mb-7">
-              <img src="media/avatars/150-26.jpg" alt="image" />
+              <img src="media/avatars/300-1.jpg" alt="image" />
             </div>
             <!--end::Avatar-->
 
             <!--begin::Name-->
             <a
               href="#"
-              class="fs-3 text-gray-800 text-hover-primary fw-bolder mb-1"
+              class="fs-3 text-gray-800 text-hover-primary fw-bold mb-1"
             >
               Max Smith
             </a>
             <!--end::Name-->
 
             <!--begin::Position-->
-            <div class="fs-5 fw-bold text-muted mb-6">Software Enginer</div>
+            <div class="fs-5 fw-semobold text-muted mb-6">Software Enginer</div>
             <!--end::Position-->
 
             <!--begin::Info-->
             <div class="d-flex flex-wrap flex-center">
               <!--begin::Stats-->
               <div
-                class="
-                  border border-gray-300 border-dashed
-                  rounded
-                  py-3
-                  px-3
-                  mb-3
-                "
+                class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3"
               >
-                <div class="fs-4 fw-bolder text-gray-700">
+                <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-75px">6,900</span>
                   <span class="svg-icon svg-icon-3 svg-icon-success">
                     <inline-svg src="media/icons/duotune/arrows/arr066.svg" />
                   </span>
                 </div>
-                <div class="fw-bold text-muted">Earnings</div>
+                <div class="fw-semobold text-muted">Earnings</div>
               </div>
               <!--end::Stats-->
 
               <!--begin::Stats-->
               <div
-                class="
-                  border border-gray-300 border-dashed
-                  rounded
-                  py-3
-                  px-3
-                  mx-4
-                  mb-3
-                "
+                class="border border-gray-300 border-dashed rounded py-3 px-3 mx-4 mb-3"
               >
-                <div class="fs-4 fw-bolder text-gray-700">
+                <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-50px">130</span>
                   <span class="svg-icon svg-icon-3 svg-icon-danger">
                     <inline-svg src="media/icons/duotune/arrows/arr065.svg" />
                   </span>
                 </div>
-                <div class="fw-bold text-muted">Tasks</div>
+                <div class="fw-semobold text-muted">Tasks</div>
               </div>
               <!--end::Stats-->
 
               <!--begin::Stats-->
               <div
-                class="
-                  border border-gray-300 border-dashed
-                  rounded
-                  py-3
-                  px-3
-                  mb-3
-                "
+                class="border border-gray-300 border-dashed rounded py-3 px-3 mb-3"
               >
-                <div class="fs-4 fw-bolder text-gray-700">
+                <div class="fs-4 fw-bold text-gray-700">
                   <span class="w-50px">500</span>
                   <span class="svg-icon svg-icon-3 svg-icon-success">
                     <inline-svg src="media/icons/duotune/arrows/arr066.svg" />
                   </span>
                 </div>
-                <div class="fw-bold text-muted">Hours</div>
+                <div class="fw-semobold text-muted">Hours</div>
               </div>
               <!--end::Stats-->
             </div>
@@ -98,7 +79,7 @@
           <!--begin::Details toggle-->
           <div class="d-flex flex-stack fs-4 py-3">
             <div
-              class="fw-bolder rotate collapsible"
+              class="fw-bold rotate collapsible"
               data-bs-toggle="collapse"
               href="#kt_customer_view_details"
               role="button"
@@ -139,11 +120,11 @@
               <div class="badge badge-light-info d-inline">Premium user</div>
               <!--begin::Badge-->
               <!--begin::Details item-->
-              <div class="fw-bolder mt-5">Account ID</div>
+              <div class="fw-bold mt-5">Account ID</div>
               <div class="text-gray-600">ID-45453423</div>
               <!--begin::Details item-->
               <!--begin::Details item-->
-              <div class="fw-bolder mt-5">Billing Email</div>
+              <div class="fw-bold mt-5">Billing Email</div>
               <div class="text-gray-600">
                 <a href="#" class="text-gray-600 text-hover-primary"
                   >info@keenthemes.com</a
@@ -151,21 +132,21 @@
               </div>
               <!--begin::Details item-->
               <!--begin::Details item-->
-              <div class="fw-bolder mt-5">Billing Address</div>
+              <div class="fw-bold mt-5">Billing Address</div>
               <div class="text-gray-600">
                 101 Collin Street, <br />Melbourne 3000 VIC <br />Australia
               </div>
               <!--begin::Details item-->
               <!--begin::Details item-->
-              <div class="fw-bolder mt-5">Language</div>
+              <div class="fw-bold mt-5">Language</div>
               <div class="text-gray-600">English</div>
               <!--begin::Details item-->
               <!--begin::Details item-->
-              <div class="fw-bolder mt-5">Upcoming Invoice</div>
+              <div class="fw-bold mt-5">Upcoming Invoice</div>
               <div class="text-gray-600">54238-8693</div>
               <!--begin::Details item-->
               <!--begin::Details item-->
-              <div class="fw-bolder mt-5">Tax ID</div>
+              <div class="fw-bold mt-5">Tax ID</div>
               <div class="text-gray-600">TX-8674</div>
               <!--begin::Details item-->
             </div>
@@ -181,7 +162,7 @@
         <!--begin::Card header-->
         <div class="card-header border-0">
           <div class="card-title">
-            <h3 class="fw-bolder m-0">Connected Accounts</h3>
+            <h3 class="fw-bold m-0">Connected Accounts</h3>
           </div>
         </div>
         <!--end::Card header-->
@@ -189,15 +170,7 @@
         <!--begin::Card body-->
         <div class="card-body pt-2">
           <div
-            class="
-              notice
-              d-flex
-              bg-light-primary
-              rounded
-              border-primary border border-dashed
-              mb-9
-              p-6
-            "
+            class="notice d-flex bg-light-primary rounded border-primary border border-dashed mb-9 p-6"
           >
             <span class="svg-icon svg-icon-2tx svg-icon-primary me-4">
               <inline-svg src="media/icons/duotune/art/art006.svg" />
@@ -205,7 +178,7 @@
             <!--begin::Wrapper-->
             <div class="d-flex flex-stack flex-grow-1">
               <!--begin::Content-->
-              <div class="fw-bold">
+              <div class="fw-semobold">
                 <div class="fs-6 text-gray-700">
                   By connecting an account, you hereby agree to our
                   <a href="#" class="me-1">privacy policy</a>and
@@ -229,12 +202,10 @@
                 />
 
                 <div class="d-flex flex-column">
-                  <a
-                    href="#"
-                    class="fs-5 text-dark text-hover-primary fw-bolder"
+                  <a href="#" class="fs-5 text-dark text-hover-primary fw-bold"
                     >Google</a
                   >
-                  <div class="fs-6 fw-bold text-muted">
+                  <div class="fs-6 fw-semobold text-muted">
                     Plan properly your workflow
                   </div>
                 </div>
@@ -243,13 +214,7 @@
               <div class="d-flex justify-content-end">
                 <!--begin::Switch-->
                 <label
-                  class="
-                    form-check
-                    form-switch
-                    form-switch-sm
-                    form-check-custom
-                    form-check-solid
-                  "
+                  class="form-check form-switch form-switch-sm form-check-custom form-check-solid"
                 >
                   <!--begin::Input-->
                   <input
@@ -264,7 +229,7 @@
 
                   <!--begin::Label-->
                   <span
-                    class="form-check-label fw-bold text-muted"
+                    class="form-check-label fw-semobold text-muted"
                     for="kt_modal_connected_accounts_google"
                   ></span>
                   <!--end::Label-->
@@ -286,12 +251,10 @@
                 />
 
                 <div class="d-flex flex-column">
-                  <a
-                    href="#"
-                    class="fs-5 text-dark text-hover-primary fw-bolder"
+                  <a href="#" class="fs-5 text-dark text-hover-primary fw-bold"
                     >Github</a
                   >
-                  <div class="fs-6 fw-bold text-muted">
+                  <div class="fs-6 fw-semobold text-muted">
                     Keep eye on on your Repositories
                   </div>
                 </div>
@@ -300,13 +263,7 @@
               <div class="d-flex justify-content-end">
                 <!--begin::Switch-->
                 <label
-                  class="
-                    form-check
-                    form-switch
-                    form-switch-sm
-                    form-check-custom
-                    form-check-solid
-                  "
+                  class="form-check form-switch form-switch-sm form-check-custom form-check-solid"
                 >
                   <!--begin::Input-->
                   <input
@@ -321,7 +278,7 @@
 
                   <!--begin::Label-->
                   <span
-                    class="form-check-label fw-bold text-muted"
+                    class="form-check-label fw-semobold text-muted"
                     for="kt_modal_connected_accounts_github"
                   ></span>
                   <!--end::Label-->
@@ -343,12 +300,10 @@
                 />
 
                 <div class="d-flex flex-column">
-                  <a
-                    href="#"
-                    class="fs-5 text-dark text-hover-primary fw-bolder"
+                  <a href="#" class="fs-5 text-dark text-hover-primary fw-bold"
                     >Slack</a
                   >
-                  <div class="fs-6 fw-bold text-muted">
+                  <div class="fs-6 fw-semobold text-muted">
                     Integrate Projects Discussions
                   </div>
                 </div>
@@ -356,13 +311,7 @@
               <div class="d-flex justify-content-end">
                 <!--begin::Switch-->
                 <label
-                  class="
-                    form-check
-                    form-switch
-                    form-switch-sm
-                    form-check-custom
-                    form-check-solid
-                  "
+                  class="form-check form-switch form-switch-sm form-check-custom form-check-solid"
                 >
                   <!--begin::Input-->
                   <input
@@ -376,7 +325,7 @@
 
                   <!--begin::Label-->
                   <span
-                    class="form-check-label fw-bold text-muted"
+                    class="form-check-label fw-semobold text-muted"
                     for="kt_modal_connected_accounts_slack"
                   ></span>
                   <!--end::Label-->
@@ -404,13 +353,7 @@
     <div class="flex-lg-row-fluid ms-lg-15">
       <!--begin:::Tabs-->
       <ul
-        class="
-          nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x
-          border-0
-          fs-4
-          fw-bold
-          mb-8
-        "
+        class="nav nav-custom nav-tabs nav-line-tabs nav-line-tabs-2x border-0 fs-4 fw-semobold mb-8"
       >
         <!--begin:::Tab item-->
         <li class="nav-item">
@@ -518,9 +461,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted } from "vue";
-import { setCurrentPageBreadcrumbs } from "@/core/helpers/breadcrumb";
-import { MenuComponent } from "@/assets/ts/components";
+import { defineComponent } from "vue";
 import Dropdown3 from "@/components/dropdown/Dropdown3.vue";
 import NewCardModal from "@/components/modals/forms/NewCardModal.vue";
 import PaymentRecords from "@/components/customers/cards/overview/PaymentRecords.vue";
@@ -547,14 +488,6 @@ export default defineComponent({
     Statement,
     Dropdown3,
     NewCardModal,
-  },
-  setup() {
-    onMounted(() => {
-      MenuComponent.reinitialization();
-      setCurrentPageBreadcrumbs("Customer Details", ["Apps", "Customers"]);
-    });
-
-    return {};
   },
 });
 </script>

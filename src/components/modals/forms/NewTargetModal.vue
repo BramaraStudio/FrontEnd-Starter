@@ -44,10 +44,9 @@
               <!--end::Title-->
 
               <!--begin::Description-->
-              <div class="text-gray-400 fw-bold fs-5">
+              <div class="text-gray-400 fw-semobold fs-5">
                 If you need more info, please check
-                <a href="#" class="fw-bolder link-primary">Project Guidelines</a
-                >.
+                <a href="#" class="fw-bold link-primary">Project Guidelines</a>.
               </div>
               <!--end::Description-->
             </div>
@@ -56,7 +55,7 @@
             <!--begin::Input group-->
             <div class="d-flex flex-column mb-8 fv-row">
               <!--begin::Label-->
-              <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+              <label class="d-flex align-items-center fs-6 fw-semobold mb-2">
                 <span class="required">Target Title</span>
                 <i
                   class="fas fa-exclamation-circle ms-2 fs-7"
@@ -80,7 +79,7 @@
             <div class="row g-9 mb-8">
               <!--begin::Col-->
               <div class="col-md-6 fv-row">
-                <label class="required fs-6 fw-bold mb-2">Assign</label>
+                <label class="required fs-6 fw-semobold mb-2">Assign</label>
 
                 <el-form-item prop="assign">
                   <el-select
@@ -108,27 +107,18 @@
 
               <!--begin::Col-->
               <div class="col-md-6 fv-row">
-                <label class="required fs-6 fw-bold mb-2">Due Date</label>
+                <label class="required fs-6 fw-semobold mb-2">Due Date</label>
 
                 <!--begin::Input-->
                 <div class="position-relative align-items-center">
-                  <!--begin::Icon-->
-                  <div class="symbol symbol-20px me-4 position-absolute ms-4">
-                    <span class="symbol-label bg-secondary">
-                      <span class="svg-icon">
-                        <inline-svg
-                          src="media/icons/duotune/general/gen025.svg"
-                        />
-                      </span>
-                    </span>
-                  </div>
-                  <!--end::Icon-->
-
                   <!--begin::Datepicker-->
                   <el-form-item prop="dueDate">
                     <el-date-picker
                       v-model="targetData.dueDate"
+                      type="date"
                       placeholder="Select a date"
+                      :teleported="false"
+                      popper-class="override-styles"
                       name="dueDate"
                     />
                   </el-form-item>
@@ -142,7 +132,7 @@
 
             <!--begin::Input group-->
             <div class="d-flex flex-column mb-8">
-              <label class="fs-6 fw-bold mb-2">Target Details</label>
+              <label class="fs-6 fw-semobold mb-2">Target Details</label>
 
               <el-form-item prop="targetDetails">
                 <el-input
@@ -159,7 +149,7 @@
             <!--begin::Input group-->
             <div class="d-flex flex-column mb-8 fv-row">
               <!--begin::Label-->
-              <label class="d-flex align-items-center fs-6 fw-bold mb-2">
+              <label class="d-flex align-items-center fs-6 fw-semobold mb-2">
                 <span class="required">Tags</span>
                 <i
                   class="fas fa-exclamation-circle ms-2 fs-7"
@@ -180,9 +170,9 @@
                 >
                   <el-option label="Important" value="important"> </el-option>
                   <el-option label="Urgent" value="urgent"> </el-option>
-                  <el-option label="high" value="high"> </el-option>
-                  <el-option label="low" value="low"> </el-option>
-                  <el-option label="medium" value="medium"> </el-option>
+                  <el-option label="High" value="high"> </el-option>
+                  <el-option label="Low" value="low"> </el-option>
+                  <el-option label="Medium" value="medium"> </el-option>
                 </el-select>
               </el-form-item>
             </div>
@@ -192,9 +182,11 @@
             <div class="d-flex flex-stack mb-8">
               <!--begin::Label-->
               <div class="me-5">
-                <label class="fs-6 fw-bold">Adding Users by Team Members</label>
+                <label class="fs-6 fw-semobold"
+                  >Adding Users by Team Members</label
+                >
 
-                <div class="fs-7 fw-bold text-gray-400">
+                <div class="fs-7 fw-semobold text-gray-400">
                   If you need more info, please check budget planning
                 </div>
               </div>
@@ -202,9 +194,7 @@
 
               <!--begin::Switch-->
               <label
-                class="
-                  form-check form-switch form-check-custom form-check-solid
-                "
+                class="form-check form-switch form-check-custom form-check-solid"
               >
                 <input
                   class="form-check-input"
@@ -212,7 +202,7 @@
                   value="1"
                   checked="checked"
                 />
-                <span class="form-check-label fw-bold text-gray-400">
+                <span class="form-check-label fw-semobold text-gray-400">
                   Allowed
                 </span>
               </label>
@@ -225,7 +215,7 @@
               <!--begin::Wrapper-->
               <div class="d-flex flex-stack">
                 <!--begin::Label-->
-                <div class="fw-bold me-5">
+                <div class="fw-semobold me-5">
                   <label class="fs-6">Notifications</label>
 
                   <div class="fs-7 text-gray-400">
@@ -248,7 +238,7 @@
                       checked="checked"
                     />
 
-                    <span class="form-check-label fw-bold"> Email </span>
+                    <span class="form-check-label fw-semobold"> Email </span>
                   </label>
                   <!--end::Checkbox-->
 
@@ -261,7 +251,7 @@
                       value="phone"
                     />
 
-                    <span class="form-check-label fw-bold"> Phone </span>
+                    <span class="form-check-label fw-semobold"> Phone </span>
                   </label>
                   <!--end::Checkbox-->
                 </div>
@@ -276,7 +266,7 @@
               <button
                 type="reset"
                 id="kt_modal_new_target_cancel"
-                class="btn btn-white me-3"
+                class="btn btn-light me-3"
               >
                 Cancel
               </button>
@@ -290,7 +280,7 @@
                 <span v-if="!loading" class="indicator-label">
                   Submit
                   <span class="svg-icon svg-icon-3 ms-2 me-0">
-                    <inline-svg src="icons/duotune/arrows/arr064.svg" />
+                    <inline-svg src="media/icons/duotune/arrows/arr064.svg" />
                   </span>
                 </span>
                 <span v-if="loading" class="indicator-progress">
@@ -436,3 +426,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="scss">
+.override-styles {
+  z-index: 99999 !important;
+  pointer-events: initial;
+}
+</style>

@@ -4,9 +4,11 @@
     <!--begin::Header-->
     <div class="card-header border-0 pt-5">
       <h3 class="card-title align-items-start flex-column">
-        <span class="card-label fw-bolder fs-3 mb-1">New Products</span>
+        <span class="card-label fw-bold fs-3 mb-1">New Products</span>
 
-        <span class="text-muted mt-1 fw-bold fs-7">Over 500 new products</span>
+        <span class="text-muted mt-1 fw-semobold fs-7"
+          >Over 500 new products</span
+        >
       </h3>
       <div class="card-toolbar">
         <!--begin::Menu-->
@@ -33,12 +35,7 @@
       <div class="table-responsive">
         <!--begin::Table-->
         <table
-          class="
-            table table-row-dashed table-row-gray-300
-            align-middle
-            gs-0
-            gy-4
-          "
+          class="table table-row-dashed table-row-gray-300 align-middle gs-0 gy-4"
         >
           <!--begin::Table head-->
           <thead>
@@ -68,7 +65,7 @@
                       <span
                         v-else-if="item.user.state"
                         :class="`bg-light-${item.user.state} text-${item.user.state}`"
-                        class="symbol-label fw-bolder"
+                        class="symbol-label fw-bold"
                       >
                         {{ item.user.name.charAt(0) }}
                       </span>
@@ -79,19 +76,13 @@
                     <div class="d-flex justify-content-start flex-column">
                       <a
                         href="#"
-                        class="text-dark fw-bolder text-hover-primary mb-1 fs-6"
+                        class="text-dark fw-bold text-hover-primary mb-1 fs-6"
                         >{{ item.user.name }}</a
                       >
 
                       <a
                         href="#"
-                        class="
-                          text-muted text-hover-primary
-                          fw-bold
-                          text-muted
-                          d-block
-                          fs-7
-                        "
+                        class="text-muted text-hover-primary fw-semobold text-muted d-block fs-7"
                       >
                         <span class="text-dark">Email</span>:
                         {{ item.user.email }}
@@ -104,22 +95,15 @@
                 <td class="text-end">
                   <a
                     href="#"
-                    class="
-                      text-dark
-                      fw-bolder
-                      text-hover-primary
-                      d-block
-                      mb-1
-                      fs-6
-                    "
+                    class="text-dark fw-bold text-hover-primary d-block mb-1 fs-6"
                     >{{ item.price }}</a
                   >
-                  <span class="text-muted fw-bold text-muted d-block fs-7"
+                  <span class="text-muted fw-semobold text-muted d-block fs-7"
                     >Paid</span
                   >
                 </td>
 
-                <td class="text-muted fw-bold text-end">
+                <td class="text-muted fw-semobold text-end">
                   {{ item.technologies }}
                 </td>
 
@@ -134,10 +118,7 @@
                 <td class="text-end">
                   <a
                     href="#"
-                    class="
-                      btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                      me-1
-                    "
+                    class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
                     <span class="svg-icon svg-icon-3">
                       <inline-svg
@@ -148,10 +129,7 @@
 
                   <a
                     href="#"
-                    class="
-                      btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                      me-1
-                    "
+                    class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm me-1"
                   >
                     <span class="svg-icon svg-icon-3">
                       <inline-svg src="media/icons/duotune/art/art005.svg" />
@@ -160,9 +138,7 @@
 
                   <a
                     href="#"
-                    class="
-                      btn btn-icon btn-bg-light btn-active-color-primary btn-sm
-                    "
+                    class="btn btn-icon btn-bg-light btn-active-color-primary btn-sm"
                   >
                     <span class="svg-icon svg-icon-3">
                       <inline-svg
@@ -201,7 +177,7 @@ export default defineComponent({
     const list = [
       {
         user: {
-          avatar: "media/avatars/150-1.jpg",
+          avatar: "media/avatars/300-6.jpg",
           name: "Emma Smith",
           email: "e.smith@kpmg.com.au",
         },
@@ -227,7 +203,7 @@ export default defineComponent({
       },
       {
         user: {
-          avatar: "media/avatars/150-2.jpg",
+          avatar: "media/avatars/300-1.jpg",
           name: "Max Smith",
           email: "max@kt.com",
         },
@@ -240,7 +216,7 @@ export default defineComponent({
       },
       {
         user: {
-          avatar: "media/avatars/150-4.jpg",
+          avatar: "media/avatars/300-5.jpg",
           name: "Sean Bean",
           email: "sean@dellito.com",
         },
@@ -253,7 +229,7 @@ export default defineComponent({
       },
       {
         user: {
-          avatar: "media/avatars/150-15.jpg",
+          avatar: "media/avatars/300-25.jpg",
           name: "Brian Cox",
           email: "brian@exchange.com",
         },

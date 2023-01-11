@@ -19,7 +19,7 @@ class ApiService {
   public static init(app: App<Element>) {
     ApiService.vueInstance = app;
     ApiService.vueInstance.use(VueAxios, axios);
-    ApiService.vueInstance.axios.defaults.baseURL = "http://localhost";
+    ApiService.vueInstance.axios.defaults.baseURL = process.env.VUE_APP_API_URL;
   }
 
   /**
@@ -29,6 +29,8 @@ class ApiService {
     ApiService.vueInstance.axios.defaults.headers.common[
       "Authorization"
     ] = `Token ${JwtService.getToken()}`;
+    ApiService.vueInstance.axios.defaults.headers.common["Accept"] =
+      "application/json";
   }
 
   /**
@@ -41,9 +43,7 @@ class ApiService {
     resource: string,
     params: AxiosRequestConfig
   ): Promise<AxiosResponse> {
-    return ApiService.vueInstance.axios.get(resource, params).catch((error) => {
-      throw new Error(`[KT] ApiService ${error}`);
-    });
+    return ApiService.vueInstance.axios.get(resource, params);
   }
 
   /**
@@ -56,11 +56,7 @@ class ApiService {
     resource: string,
     slug = "" as string
   ): Promise<AxiosResponse> {
-    return ApiService.vueInstance.axios
-      .get(`${resource}/${slug}`)
-      .catch((error) => {
-        throw new Error(`[KT] ApiService ${error}`);
-      });
+    return ApiService.vueInstance.axios.get(`${resource}/${slug}`);
   }
 
   /**
@@ -110,9 +106,7 @@ class ApiService {
    * @returns Promise<AxiosResponse>
    */
   public static delete(resource: string): Promise<AxiosResponse> {
-    return ApiService.vueInstance.axios.delete(resource).catch((error) => {
-      throw new Error(`[RWV] ApiService ${error}`);
-    });
+    return ApiService.vueInstance.axios.delete(resource);
   }
 }
 

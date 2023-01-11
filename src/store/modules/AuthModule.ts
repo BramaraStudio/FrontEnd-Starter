@@ -8,18 +8,18 @@ export interface User {
   surname: string;
   email: string;
   password: string;
-  token: string;
+  api_token: string;
 }
 
 export interface UserAuthInfo {
-  errors: Array<string>;
+  errors: unknown;
   user: User;
   isAuthenticated: boolean;
 }
 
 @Module
 export default class AuthModule extends VuexModule implements UserAuthInfo {
-  errors = [];
+  errors = {};
   user = {} as User;
   isAuthenticated = !!JwtService.getToken();
 
@@ -43,21 +43,21 @@ export default class AuthModule extends VuexModule implements UserAuthInfo {
    * Get authentification errors
    * @returns array
    */
-  get getErrors(): Array<string> {
+  get getErrors() {
     return this.errors;
   }
 
   @Mutation
   [Mutations.SET_ERROR](error) {
-    this.errors = error;
+    this.errors = { ...error };
   }
 
   @Mutation
   [Mutations.SET_AUTH](user) {
     this.isAuthenticated = true;
     this.user = user;
-    this.errors = [];
-    JwtService.saveToken(this.user.token);
+    this.errors = {};
+    JwtService.saveToken(user.api_token);
   }
 
   @Mutation
@@ -80,17 +80,13 @@ export default class AuthModule extends VuexModule implements UserAuthInfo {
 
   @Action
   [Actions.LOGIN](credentials) {
-    return new Promise<void>((resolve, reject) => {
-      ApiService.post("login", credentials)
-        .then(({ data }) => {
-          this.context.commit(Mutations.SET_AUTH, data);
-          resolve();
-        })
-        .catch(({ response }) => {
-          this.context.commit(Mutations.SET_ERROR, response.data.errors);
-          reject();
-        });
-    });
+    return ApiService.post("login", credentials)
+      .then(({ data }) => {
+        this.context.commit(Mutations.SET_AUTH, data);
+      })
+      .catch(({ response }) => {
+        this.context.commit(Mutations.SET_ERROR, response.data.errors);
+      });
   }
 
   @Action
@@ -100,64 +96,40 @@ export default class AuthModule extends VuexModule implements UserAuthInfo {
 
   @Action
   [Actions.REGISTER](credentials) {
-    return new Promise<void>((resolve, reject) => {
-      ApiService.post("registration", credentials)
-        .then(({ data }) => {
-          this.context.commit(Mutations.SET_AUTH, data);
-          resolve();
-        })
-        .catch(({ response }) => {
-          this.context.commit(Mutations.SET_ERROR, response.data.errors);
-          reject();
-        });
-    });
+    return ApiService.post("register", credentials)
+      .then(({ data }) => {
+        this.context.commit(Mutations.SET_AUTH, data);
+      })
+      .catch(({ response }) => {
+        this.context.commit(Mutations.SET_ERROR, response.data.errors);
+      });
   }
 
   @Action
   [Actions.FORGOT_PASSWORD](payload) {
-    return new Promise<void>((resolve, reject) => {
-      ApiService.post("forgot_password", payload)
-        .then(({ data }) => {
-          this.context.commit(Mutations.SET_AUTH, data);
-          resolve();
-        })
-        .catch(({ response }) => {
-          console.log(response.data.errors);
-          this.context.commit(Mutations.SET_ERROR, response.data.errors);
-          reject();
-        });
-    });
+    return ApiService.post("forgot_password", payload)
+      .then(() => {
+        this.context.commit(Mutations.SET_ERROR, {});
+      })
+      .catch(({ response }) => {
+        this.context.commit(Mutations.SET_ERROR, response.data.errors);
+      });
   }
 
   @Action
-  [Actions.VERIFY_AUTH]() {
+  [Actions.VERIFY_AUTH](payload) {
     if (JwtService.getToken()) {
       ApiService.setHeader();
-      ApiService.get("verify")
+      ApiService.post("verify_token", payload)
         .then(({ data }) => {
           this.context.commit(Mutations.SET_AUTH, data);
         })
         .catch(({ response }) => {
           this.context.commit(Mutations.SET_ERROR, response.data.errors);
+          this.context.commit(Mutations.PURGE_AUTH);
         });
     } else {
       this.context.commit(Mutations.PURGE_AUTH);
     }
-  }
-
-  @Action
-  [Actions.UPDATE_USER](payload) {
-    ApiService.setHeader();
-    return new Promise<void>((resolve, reject) => {
-      ApiService.post("update_user", payload)
-        .then(({ data }) => {
-          this.context.commit(Mutations.SET_USER, data);
-          resolve();
-        })
-        .catch(({ response }) => {
-          this.context.commit(Mutations.SET_ERROR, response.data.errors);
-          reject();
-        });
-    });
   }
 }

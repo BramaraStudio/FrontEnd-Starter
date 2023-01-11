@@ -2,9 +2,6 @@
 // Theme style
 //
 
-// Mode
-$mode: default;
-
 // Initialize
 @import "init";
 
@@ -14,4 +11,3 @@ $mode: default;
 
 // Layout
 @import "layout/layout";
-@import "./core/layout/docs/layout";

@@ -9,17 +9,19 @@
         <div class="d-flex align-items-center flex-grow-1">
           <!--begin::Avatar-->
           <div class="symbol symbol-45px me-5">
-            <img src="media/avatars/150-6.jpg" alt="" />
+            <img src="media/avatars/300-23.jpg" alt="" />
           </div>
           <!--end::Avatar-->
 
           <!--begin::Info-->
           <div class="d-flex flex-column">
-            <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bolder"
+            <a href="#" class="text-gray-800 text-hover-primary fs-6 fw-bold"
               >Nick Logan</a
             >
 
-            <span class="text-gray-400 fw-bold">PHP, SQLite, Artisan CLI</span>
+            <span class="text-gray-400 fw-semobold"
+              >PHP, SQLite, Artisan CLI</span
+            >
           </div>
           <!--end::Info-->
         </div>
@@ -29,9 +31,7 @@
         <div class="my-0">
           <button
             type="button"
-            class="
-              btn btn-sm btn-icon btn-color-primary btn-active-light-primary
-            "
+            class="btn btn-sm btn-icon btn-color-primary btn-active-light-primary"
             data-kt-menu-trigger="click"
             data-kt-menu-placement="bottom-end"
             data-kt-menu-flip="top-end"
@@ -60,12 +60,7 @@
         <div class="d-flex align-items-center mb-5">
           <a
             href="#"
-            class="
-              btn btn-sm btn-light btn-color-muted btn-active-light-success
-              px-4
-              py-2
-              me-4
-            "
+            class="btn btn-sm btn-light btn-color-muted btn-active-light-success px-4 py-2 me-4"
           >
             <span class="svg-icon svg-icon-3">
               <inline-svg src="media/icons/duotune/communication/com012.svg" />
@@ -75,11 +70,7 @@
 
           <a
             href="#"
-            class="
-              btn btn-sm btn-light btn-color-muted btn-active-light-danger
-              px-4
-              py-2
-            "
+            class="btn btn-sm btn-light btn-color-muted btn-active-light-danger px-4 py-2"
           >
             <span class="svg-icon svg-icon-3">
               <inline-svg src="media/icons/duotune/general/gen030.svg" />

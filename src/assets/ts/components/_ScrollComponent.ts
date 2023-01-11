@@ -240,9 +240,12 @@ class ScrollComponent {
     return DataUtil.has(element, 'scroll')
   }
 
-  public static getInstance(element: HTMLElement) {
+  public static getInstance(element: HTMLElement): ScrollComponent | undefined {
     if (element !== null && ScrollComponent.hasInstace(element)) {
-      return DataUtil.get(element, 'scroll')
+      const data = DataUtil.get(element, 'scroll')
+      if (data) {
+        return data as ScrollComponent
+      }
     }
   }
 
@@ -280,7 +283,7 @@ class ScrollComponent {
     ScrollComponent.createInstances(attr)
   }
 
-  public static updateAll(){
+  public static updateAll() {
     const elements = document.body.querySelectorAll('[data-kt-scroll="true"]')
     elements.forEach((element: Element) => {
       const instance = ScrollComponent.getInstance(element as HTMLElement)
@@ -298,7 +301,7 @@ class ScrollComponent {
         timer,
         () => {
           // Locate and update Drawer instances on window resize
-          ScrollComponent.updateAll();
+          ScrollComponent.updateAll()
         },
         200
       )

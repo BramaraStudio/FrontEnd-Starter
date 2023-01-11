@@ -5,10 +5,14 @@
 // Root font Sizes
 $root-font-size:                                    13px; // Root font size for desktop mode
 $root-font-size-lg:                             	13px; // Root font size for tablet mode
-$root-font-size-md:                             	12px; // Root font size for mobile mode 
+$root-font-size-md:                             	12px; // Root font size for mobile mode
 
-// Page background Color
-$page-bg: 								  #F3F6F9;
+// Page bg
+$page-bg: 											$gray-100 !default;
+$page-bg-dark: 										#151521 !default;
+
+// Content border radius
+$content-border-radius:								1.5rem !default;
 
 // Content Spacing
 $content-spacing: (
@@ -16,54 +20,37 @@ $content-spacing: (
 	tablet-and-mobile: 15px // Padding for tablet and mobile modes
 ) !default;
 
-
 // Header
 $header-config: (
-	// Desktop Mode
-	desktop: (
-		// Default Mode
-		default: (
-			height: 100px
-		),
-
-		// Fixed Mode
-		fixed: (
-			height: 65px,
-			z-index: 97,
-			bg-color: $white,
-			box-shadow: 0px 10px 30px 0px rgba(82,63,105,0.08)
-		)
+	height: (
+		desktop: 74px,
+		tablet-and-mobile: 55px
 	),
-
-	// Tablet & Mobile Modes
-	tablet-and-mobile: (
-		// Default Mode
-		default: (
-			height: 60px,
-		),
-
-		// Fixed Mode
-		fixed: (
-			z-index: 97,
-			height: 55px,
-			bg-color: $white,
-			box-shadow: 0px 10px 30px 0px rgba(82,63,105,0.08)
-		)
-	)
+	z-index: 100,
+	bg-color: $white,
+	bg-color-dark: #1E1E2D,
+	border-bottom: 0,
+	border-bottom-dark: 1px solid #2D2D43,
+	box-shadow: 0px 10px 30px 0px rgba(82,63,105,0.05),
+	box-shadow-dark: none	
 ) !default;
-
 
 // Aside
 $aside-config: (
-	width: (
-		desktop: 425px, 
-		tablet-and-mobile: 300px
-	),
-	primary-width: (
-		desktop: 100px, 
-		tablet-and-mobile: 70px
-	),
-	z-index: 98, // Aside's z-index property
+	width: 265px, // Aside width for desktop mode
+	z-index: 101, // Aside's z-index property
 	transition-speed: 0.3s, // transition speed
-	box-shadow: 0px 0px 80px 50px rgba(206, 213, 225, 0.12), //5px 0px 10px rgba(70, 78, 95, 0.05), // Aside's box shadow	
+	padding-x: 25px,
+	footer-padding-x: 15px,
+	menu-padding-x: 10px,
+	menu-indention: 0.75rem,
+	bg-color: #1E1E2D,
+	scrollbar-color: #4d4d69,
+	scrollbar-hover-color: lighten(#4d4d69, 2%)	
+) !default;
+
+// Aside
+$footer-config: (	
+	bg-color: $white,
+	bg-color-dark: #1B1B28,
 ) !default;

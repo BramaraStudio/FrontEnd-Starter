@@ -6,39 +6,36 @@
 
 // Theme colors
 // Primary
-$primary:       									#04C8C8;
-$primary-active:    								#00AFAF;
-$primary-light:    									#DCFDFD;
-$primary-inverse:  									#FFFFFF;
+$primary:       									#009ef7;
+$primary-active:    								#0095e8;
+$primary-light:    								    #f1faff;
+$primary-light-dark:							    #212e48;
+$primary-inverse:  									#ffffff;
 
 // Success
-$success:       									#366CF9;
-$success-active:    								#4A7DFF;
-$success-light:    									#F1F5FF;
-$success-inverse:  									#FFFFFF;
+$success:       									#50cd89;
+$success-active:    								#47be7d;
+$success-light:    									#e8fff3;
+$success-light-dark:    							#1c3238;
+$success-inverse:  									#ffffff;
 
 // Info
-$info:       									    #7239EA;
-$info-active:    									#5014D0;
-$info-light:    									#F8F5FF;
-$info-inverse:  									#FFFFFF;
+$info:       									    #7239ea;
+$info-active:    									#5014d0;
+$info-light:    									#f8f5ff;
+$info-light-dark:    								#2f264f;
+$info-inverse:  									#ffffff;
 
 // Danger
-$danger:       									    #F1416C;
-$danger-active:    									#D9214E;
-$danger-light:    									#FFF5F8;
-$danger-inverse:  									#FFFFFF;
+$danger:       									    #f1416c;
+$danger-active:    									#d9214e;
+$danger-light:    									#fff5f8;
+$danger-light-dark:    								#3a2434;
+$danger-inverse:  									#ffffff;
 
 // Warning
-$warning:       									#FFC700;
-$warning-active:    								#F1BC00;
-$warning-light:    									#FFF8DD;
-$warning-inverse:  									#FFFFFF;
-
-// Card Box Shadow                                  
-$card-box-shadow:                                   0px 10px 35px 0px rgba(56,71,109,0.075);
-$card-border-radius:                                0.85rem;
-
-// Font family
-$font-family-sans-serif:                            'Roboto', sans-serif;
-
+$warning:       									#ffc700;
+$warning-active:    								#f1bc00;
+$warning-light:    									#fff8dd;
+$warning-light-dark:    							#392f28;
+$warning-inverse:  									#ffffff;
